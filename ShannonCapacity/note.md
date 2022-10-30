@@ -66,7 +66,6 @@ If $(u_{n})$ and $(v_{n})$ be orthonormal representation of $G$ and $H$ respecti
 
 $$
 \theta(G\cdot H) \le \theta(G)\theta(H)
-
 $$
 
 > this follows directly from the definition
@@ -122,9 +121,7 @@ $$
 \Theta(C_{5}) = \sqrt{5}
 $$
 
-![ScreenShot Tue Oct 25 16:52:22 CST 2022.png](https://raw.githubusercontent.com/Alex222222222222/ImgBed/main/2022/10/25-17-08-41-ScreenShot%20Tue%20Oct%2025%2016%3A52%3A22%20CST%202022.png)
-
-> note that this not two adjacency ribs that are orthogonal but two ribs that have one rib between them are orthogonal
+> ![ScreenShot Tue Oct 25 16:52:22 CST 2022.png](https://raw.githubusercontent.com/Alex222222222222/ImgBed/main/2022/10/25-17-08-41-ScreenShot%20Tue%20Oct%2025%2016%3A52%3A22%20CST%202022.png)note that this not two adjacency ribs that are orthogonal but two ribs that have one rib between them are orthogonal
 
 ### Theorem 3
 
@@ -268,29 +265,31 @@ $$
 > 
 > $$
 > \begin{aligned}
-> a^{T}\hat{h}& = 
-> \sum_{\{i,j\}=\{i_{k},j_{k}\}} a_{k}h_{i}h_{j}
+a^{T}\hat{h}& = 
+\sum_{\{i,j\}=\{i_{k},j_{k}\}} a_{k}h_{i}h_{j}
 
-+ y (\sum h_{i})^{2} \\
-  &= y \sum_{i=1}^{n}\sum_{j=1}^{n} h_{i}h_{j}
-+ \sum_{\{i,j\}=\{i_{k},j_{k}\}} a_{k}h_{i}h_{j} \\
-  &= \sum_{i=1}^{n}\sum_{j=1}^{n} a_{i,j}h_{i}h_{j} \\
-  &\le \alpha
-  \end{aligned}
-  
-  > $$
-  > Let $A=(\frac{a_{i,j}}{y})$ , and the largest eigenvalue of $A$ is equal to 
+y (\sum h_{i})^{2} \\
+&= y \sum_{i=1}^{n}\sum_{j=1}^{n} h_{i}h_{j}
 
-  > $$
-  > 
-  > \max\{x^{T}Ax:\lvert x \rvert = 1\}
-  > $$
-  > 
-  > this implies that the largest eigenvalue of $A$ is at most $\alpha$. From Theorem 3, get $\theta(G) \le \alpha$. A contradiction. This proved the claim.
-  > 
-  > ![ScreenShot Wed Oct 26 16:14:25 CST 2022.png](https://raw.githubusercontent.com/Alex222222222222/ImgBed/main/2022/10/26-16-14-29-ScreenShot%20Wed%20Oct%2026%2016%3A14%3A25%20CST%202022.png)
-  > 
-  > ![ScreenShot Wed Oct 26 16:14:45 CST 2022.png](https://raw.githubusercontent.com/Alex222222222222/ImgBed/main/2022/10/26-16-14-48-ScreenShot%20Wed%20Oct%2026%2016%3A14%3A45%20CST%202022.png)
+\sum_{\{i,j\}=\{i_{k},j_{k}\}} a_{k}h_{i}h_{j} \\
+&= \sum_{i=1}^{n}\sum_{j=1}^{n} a_{i,j}h_{i}h_{j} \\
+&\le \alpha
+\end{aligned}
+> $$
+> 
+> 
+> 
+> Let $A=(\frac{a_{i,j}}{y})$ , and the largest eigenvalue of $A$ is equal to 
+> 
+> $$
+> \max\{x^{T}Ax:\lvert x \rvert = 1\}
+> $$
+> 
+> this implies that the largest eigenvalue of $A$ is at most $\alpha$. From Theorem 3, get $\theta(G) \le \alpha$. A contradiction. This proved the claim.
+> 
+> ![ScreenShot Wed Oct 26 16:14:25 CST 2022.png](https://raw.githubusercontent.com/Alex222222222222/ImgBed/main/2022/10/26-16-14-29-ScreenShot%20Wed%20Oct%2026%2016%3A14%3A25%20CST%202022.png)
+> 
+> ![ScreenShot Wed Oct 26 16:14:45 CST 2022.png](https://raw.githubusercontent.com/Alex222222222222/ImgBed/main/2022/10/26-16-14-48-ScreenShot%20Wed%20Oct%2026%2016%3A14%3A45%20CST%202022.png)
 
 ### Theorem 5
 
@@ -303,7 +302,7 @@ $$
 > ![ScreenShot Thu Oct 27 14:34:10 CST 2022.png](https://raw.githubusercontent.com/Alex222222222222/ImgBed/main/2022/10/27-14-34-26-ScreenShot%20Thu%20Oct%2027%2014%3A34%3A10%20CST%202022.png)
 > 
 > ![ScreenShot Thu Oct 27 14:35:44 CST 2022.png](https://raw.githubusercontent.com/Alex222222222222/ImgBed/main/2022/10/27-14-35-47-ScreenShot%20Thu%20Oct%2027%2014%3A35%3A44%20CST%202022.png)
-
+> 
 > ![ScreenShot Fri Oct 28 14:25:18 CST 2022.png](https://raw.githubusercontent.com/Alex222222222222/ImgBed/main/2022/10/28-14-27-21-ScreenShot%20Fri%20Oct%2028%2014%3A25%3A18%20CST%202022.png)
 
 ### Theorem 6
