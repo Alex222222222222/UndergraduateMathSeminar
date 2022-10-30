@@ -264,20 +264,8 @@ $$
 > Then 
 > 
 > $$
-> \begin{aligned}
-a^{T}\hat{h}& = 
-\sum_{\{i,j\}=\{i_{k},j_{k}\}} a_{k}h_{i}h_{j}
-
-y (\sum h_{i})^{2} \\
-&= y \sum_{i=1}^{n}\sum_{j=1}^{n} h_{i}h_{j}
-
-\sum_{\{i,j\}=\{i_{k},j_{k}\}} a_{k}h_{i}h_{j} \\
-&= \sum_{i=1}^{n}\sum_{j=1}^{n} a_{i,j}h_{i}h_{j} \\
-&\le \alpha
-\end{aligned}
+> \begin{aligned} a^{T}\hat{h}& = \sum_{\{i,j\}=\{i_{k},j_{k}\}} a_{k}h_{i}h_{j} y (\sum h_{i})^{2} \\ &= y \sum_{i=1}^{n}\sum_{j=1}^{n} h_{i}h_{j} \sum_{\{i,j\}=\{i_{k},j_{k}\}} a_{k}h_{i}h_{j} \\ &= \sum_{i=1}^{n}\sum_{j=1}^{n} a_{i,j}h_{i}h_{j} \\  &\le \alpha\end{aligned}
 > $$
-> 
-> 
 > 
 > Let $A=(\frac{a_{i,j}}{y})$ , and the largest eigenvalue of $A$ is equal to 
 > 
