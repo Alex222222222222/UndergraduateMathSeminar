@@ -274,3 +274,9 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# vscode
+.vscode/
+
+# my own trash file
+Trash
