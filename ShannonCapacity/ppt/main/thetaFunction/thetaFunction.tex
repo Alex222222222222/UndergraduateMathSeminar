@@ -1,0 +1,121 @@
+\subsection{Theta Function}
+
+      \begin{frame}
+            \frametitle{Theta Function}
+            Given a graph $ G $, the $ \theta(G) $ is defined by
+            \begin{equation}
+                  \theta(G) = \inf_{\{v_1, v_2, \dots, v_n\},c} \max_{i} \frac{1}{\left<c,v_{i}\right>^2}
+            \end{equation}
+            where $ \{v_1, v_2, \dots, v_n\} $ is an orthonormal representation of $ G $, and c is any unit vector does not orthogonal to $ v_i $.
+
+            \pause
+
+            \begin{lemma}
+                  There always exist such an $c$ and orthonormal representation $ \{v_1, v_2, \dots, v_n\} $ such that
+                  \begin{equation}
+                        \theta(G) = \max_{i} \frac{1}{\left<c,v_{i}\right>^2}
+                  \end{equation}
+            \end{lemma}
+
+            This could be proved by proving the set of all possible cases of $ \{v_1, v_2, \dots, v_n,c \} $ is compact. And the function $ \max \frac{1}{\left<c,v_{i}\right>^2} $ is continuous.
+      \end{frame}
+
+\subsection{Theta Function of Product Graph}
+
+      \begin{frame}
+            \frametitle{Theta Function of Product Graph}
+            \begin{lemma}
+                  Given graph $ G $ and $ H $, then
+                  \begin{equation}
+                        \theta(G \times H) \leq \theta(G) \theta(H)
+                  \end{equation}
+            \end{lemma}
+
+            \pause
+
+            \begin{proof}
+                  Let $ \{v_1, v_2, \dots, v_n\} $ and $ \{w_1, w_2, \dots, w_m\} $ be orthonormal representation of $ G $ and $ H $ and $ c_{v} $ and $ c_{w} $ such that
+                  \begin{equation}
+                        \max \left\{ \frac{1}{\left<c_{v},v_{i}\right>^2} : i=1,2,\dots,n \right\} = \theta(G)
+                  \end{equation} 
+                  and 
+                  \begin{equation}
+                        \max \left\{ \frac{1}{\left<c_{w},w_{i}\right>^2} : i=1,2,\dots,m \right\} = \theta(H)
+                  \end{equation}
+            \end{proof}
+      \end{frame}
+
+      \begin{frame}
+            \begin{proof}
+                  Then
+                  \begin{eqnarray}
+                        \theta(G \times H) &\leq& 
+                        \max \left\{ \frac{1}{\left<c_{v} \circ c_{w},v_{i} \circ w_{j}\right>^2} \right\} \\
+                        &=& \max \left\{ \frac{1}{\left<c_{v},v_{i}\right>^2 \left<c_{w},w_{j}\right>^2} \right\} \\
+                        &=& \max \left\{ \frac{1}{\left<c_{v},v_{i}\right>^2} \right\} \max \left\{ \frac{1}{\left<c_{w},w_{j}\right>^2} \right\} \\
+                        &=& \theta(G) \theta(H) \\
+                  \end{eqnarray}
+            \end{proof}
+      \end{frame}
+
+\subsection*{Relation of Theta Function and Alpha Function}
+
+      \begin{frame}
+            \frametitle{Relation of Theta Function and Alpha Function}
+
+            \begin{lemma}
+                  \begin{equation}
+                        \theta(G) \geq \alpha(G)
+                  \end{equation}
+            \end{lemma}
+
+            \pause
+
+            \begin{proof}
+                  Let $ \{1,2,\dots,k\} $ be the set of vertices of $ G $ such that every point is not adjacency in $ G $. And $ k = \alpha(G) $
+      
+                  Let $ \{v_1, v_2, \dots, v_n\} $ be an orthonormal representation of $ G $ and $ c $ such that
+                  \begin{equation}
+                        \max \left\{ \frac{1}{\left<c,v_{i}\right>^2} \right\} = \theta(G)
+                  \end{equation}
+                        
+                  Then
+                  \begin{eqnarray}
+                        1 &=& c^{2}
+                        \geq \sum_{i=1}^{k} \left<c,v_{i}\right>^{2}
+                        \geq \frac{k}{\theta(G)}
+                  \end{eqnarray}
+            \end{proof}
+      \end{frame}
+
+\subsection*{Relation of Theta Function and Shannon Capacity}
+      
+      \begin{frame}
+            \frametitle{Relation of Theta Function and Shannon Capacity}
+
+            \begin{theorem}
+                  Given a graph $ G $, then
+                  \begin{equation}
+                        \theta(G) \geq \Theta(G)
+                  \end{equation}
+            \end{theorem}
+
+            \pause
+
+            \begin{proof}
+                  % TODO
+                  \begin{eqnarray}
+                        \Theta(G) &=& \lim_{n} \sqrt[n]{\alpha(G^{n})} \\
+                        &\leq& \lim_{n} \sqrt[n]{\theta(G^{n})} \\
+                        &\leq& \lim_{n} \sqrt[n]{\theta(G)^{n}} \\
+                        &=& \theta(G)
+                  \end{eqnarray}
+            \end{proof}
+      \end{frame}
+
+      \begin{frame}
+            The final result we want to prove today,
+            \begin{equation}
+                  \Theta(C_{5}) \le \theta(C_{5}) \le \sqrt{5}
+            \end{equation}
+      \end{frame}

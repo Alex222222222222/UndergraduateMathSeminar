@@ -1,0 +1,52 @@
+\subsection{Orthonormal Representation}
+
+      \begin{frame}
+            \frametitle{Orthonormal Representation}
+
+            Here we have the third way to defined a set of characters.
+
+            \begin{definition}[Orthonormal Representation]\label{def:orthonormalRepresentation}
+                  Given a graph $ G $ with vertices $ 1,2,\dots,n $, the orthonormal representation of $ G $ is a set of unit vectors $ \{v_1, v_2, \dots, v_n\} $ such that $ v_i $ and $ v_j $ are orthogonal if and only if $ i $ and $ j $ are not adjacent in $ G $.
+            \end{definition}
+
+            \pause
+
+            This existence of the orthonormal representation can be proved by induction.
+
+      \end{frame}
+
+\subsection{Tensor Product}
+
+      \begin{frame}
+            \frametitle{Tensor Product}
+            \begin{definition}[tensor product]\label{def:tensorProduct}
+                  Given two vectors $ v = \left(v_{1},\dots,v_{n}\right) $ and $ w = \left(w_{1},\dots,w_{n}\right) $, the tensor product $ v \circ w $ is defined by
+                  \begin{equation}
+                        v \circ w = \left(
+                              v_{1}w_{1},\dots,v_{1}w_{n},
+                              v_{2}w_{1},\dots,v_{2}w_{n},
+                              \dots,
+                              v_{n}w_{1},\dots,v_{n}w_{n}
+                              \right)
+                  \end{equation}
+            \end{definition}
+
+            \pause
+
+            \begin{lemma}
+                  The inner product of tensor products can be computed by,
+                  \begin{equation}
+                        \langle v \circ w, v' \circ w' \rangle = \langle v, v' \rangle \langle w, w' \rangle
+                  \end{equation}
+            \end{lemma}
+
+      \end{frame}
+
+      \begin{frame}
+            This is the product of graph in the sense of orthonormal representation.
+
+            \frametitle{Product of Orthonormal Representation}
+            \begin{lemma}
+                  Given a graph $ G $ with vertices $ 1,2,\dots,n $, and a graph $ H $ with vertices $ 1,2,\dots,m $. Then vectors $\{ v_{i}\circ w_{j} \}$ is an orthonormal representation of $ G \times H $.
+            \end{lemma}
+      \end{frame}
