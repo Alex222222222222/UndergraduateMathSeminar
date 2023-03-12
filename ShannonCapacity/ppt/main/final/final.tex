@@ -13,8 +13,6 @@
             Consider an umbrella that has a handle and $5$ ribs that all have unit length. And also its handle is a unit vector.
 
             \begin{tikzpicture}
-                  % TODO add label to point
-
                   \begin{axis}[view = {50}{40}]
                         
                   \addplot3 coordinates 
@@ -23,11 +21,15 @@
                         (0,0,-1)
                   };
 
+                  \node[below right, outer sep=2pt] at (0,0,-1) {$d$};
+
                   \addplot3 coordinates 
                   {
                         (0,0,0)
                         (0,0.74349606,-0.66874031)
                   };
+
+                  \node[above right, outer sep=2pt] at (0,0.74349606,-0.66874031) {$v_{1}$};
                         
                   \addplot3 coordinates 
                   {
@@ -35,24 +37,31 @@
                         (0.70710677,0.22975292,-0.66874031)
                   };
 
+                  \node[above right, outer sep=2pt] at (0.70710677,0.22975292,-0.66874031) {$v_{2}$};
+
                   \addplot3 coordinates 
                   {
                         (0,0,0)
                         (-0.70710677,0.22975292,-0.66874031)
                   };
 
+                  \node[above right, outer sep=2pt] at (-0.70710677,0.22975292,-0.66874031) {$v_{3}$};
 
                   \addplot3 coordinates 
                   {
                         (0,0,0)
                         (-0.43701602,-0.60150095,-0.66874031)
                   };
+
+                  \node[above right, outer sep=2pt] at (-0.43701602,-0.60150095,-0.66874031) {$v_{4}$};
                   
                   \addplot3 coordinates 
                   {
                         (0,0,0)
                         (0.43701602,-0.60150095,-0.66874031)
                   };
+
+                  \node[above left, outer sep=2pt] at (0.43701602,-0.60150095,-0.66874031) {$v_{5}$};
 
                   \end{axis}
                         
