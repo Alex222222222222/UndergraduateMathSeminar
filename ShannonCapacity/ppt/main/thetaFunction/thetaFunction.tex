@@ -103,11 +103,10 @@
             \pause
 
             \begin{proof}
-                  % TODO fix the issue of the proof by change lim to sup
                   \begin{eqnarray}
-                        \Theta(G) &=& \lim_{n} \sqrt[n]{\alpha(G^{n})} \\
-                        &\leq& \lim_{n} \sqrt[n]{\theta(G^{n})} \\
-                        &\leq& \lim_{n} \sqrt[n]{\theta(G)^{n}} \\
+                        \Theta(G) &=& \sup_{n} \sqrt[n]{\alpha(G^{n})} \\
+                        &\leq& \sup_{n} \sqrt[n]{\theta(G^{n})} \\
+                        &\leq& \sup_{n} \sqrt[n]{\theta(G)^{n}} \\
                         &=& \theta(G)
                   \end{eqnarray}
             \end{proof}
