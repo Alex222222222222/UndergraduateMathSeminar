@@ -83,16 +83,19 @@
 
       \begin{frame}
             \frametitle{Zero Error Rate of Channel}
-            If given a set of characters $S$, and some of the characters could be confusable.
+            
+            \begin{definition}
+                  If given a set of characters $S$, and some of the characters could be confusable.
 
-            We want to find
-            \begin{equation}
-                  \sup_{n} \left\{
-                        \text{zero error rate of channel send messages for $n$ unit time}
-                  \right\}
-            \end{equation}
+                  We want to find
+                  \begin{equation}
+                        \sup_{n} \left\{
+                              \text{zero error rate of channel send messages for $n$ unit time}
+                        \right\}
+                  \end{equation}
 
-            And we call this the shannon Capacity and denoted by $\Theta(S)$.
+                  And we call this the shannon Capacity and denoted by $\Theta(S)$.
+            \end{definition}
 
             Clearly, shannon Capacity is actually a function of the set of characters. So, we want a more abstract way to represent the characters.
       \end{frame}
@@ -142,16 +145,15 @@
 
 \begin{frame}
       \frametitle{Product Graph}
+      
+      The product of two graphs can be considered as send a pair of characters $(x,y)$ as one message. So, we have a channel that send messages of for $2$ unit time.
+
+      \pause
+      \smallskip
+
+      Recall that before, $2$ distinct messages is confusable means that they can be decoded into the same message, which means every characters the two channel use need to be confusable or the same.
+
       \begin{definition}[graph product]\label{def:graphProduct}
-            The product of two graphs can be considered as send a pair of characters $(x,y)$ as one message. So, we have a channel that send messages of for $2$ unit time.
-
-            \pause
-            \smallskip
-
-            Recall that before, $2$ distinct messages is confusable means that they can be decoded into the same message, which means every characters the two channel use need to be confusable or the same.
-
-            \smallskip
-
             Given two graph $ G $ and $ H $. The graph product $ G \times H $ is the graph with vertices $ V(G \times H) = V(G) \times V(H) $ in which $ (x,y) $ is adjacent to $ (x',y') $ in $ G \times H $ if and only if $ x $ is \textbf{adjacent} to $ x' $ or the \textbf{same} in $ G $ and $ y $ is \textbf{adjacent} to $ y' $ or the \textbf{same} in $ H $.
 
             \pause

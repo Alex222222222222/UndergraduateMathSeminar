@@ -20,15 +20,17 @@
       \begin{frame}
             \frametitle{Tensor Product}
             \begin{definition}[tensor product]\label{def:tensorProduct}
-                  Given two vectors $ v = \left(v_{1},\dots,v_{n}\right) $ and $ w = \left(w_{1},\dots,w_{n}\right) $, the tensor product $ v \circ w $ is defined by
+                  Given two vectors $ v = \left(v_{1},\dots,v_{n}\right)^{T} $ and $ w = \left(w_{1},\dots,w_{n}\right)^{T} $, the tensor product $ v \circ w $ is defined by
                   \begin{equation}
                         v \circ w = \left(
                               v_{1}w_{1},\dots,v_{1}w_{n},
                               v_{2}w_{1},\dots,v_{2}w_{n},
                               \dots,
                               v_{n}w_{1},\dots,v_{n}w_{n}
-                              \right)
+                              \right)^{T}
                   \end{equation}
+
+                  Somehow equal to stack up the columns of $ v w^{T} $.
             \end{definition}
 
             \pause
