@@ -20,6 +20,55 @@
             This could be proved by proving the set of all possible cases of $ \{v_1, v_2, \dots, v_n,c \} $ is compact. And the function $ \max \frac{1}{\left<c,v_{i}\right>^2} $ is continuous.
       \end{frame}
 
+\subsection*{Relation of Theta Function and Alpha Function}
+
+      \begin{frame}
+            \frametitle{Relation of Theta Function and Alpha Function}
+
+            \begin{lemma}
+                  \begin{equation}
+                        \theta(G) \geq \alpha(G)
+                  \end{equation}
+            \end{lemma}
+
+            \begin{lemma}
+                  Given a set of real finite dimensional unit vectors $ \{v_1, v_2, \dots, v_n\} $ which are mutually orthogonal, and a arbitrary unit vector $c$ then
+                  \begin{equation}
+                        \sum_{i=1}^{n}\left<c,v_{i}\right>^2 \le 1
+                  \end{equation}
+            \end{lemma}
+      \end{frame}
+
+      \begin{frame}
+            \begin{proof}
+                  Let $ \{1,2,\dots,k\} $ be the maximum set of vertices of $ G $ such that every point is not adjacency in $ G $. Thus $ k = \alpha(G) $
+      
+                  Let $ \{v_1, v_2, \dots, v_n\} $ be an orthonormal representation of $ G $ and $ c $ such that
+                  \begin{equation}
+                        \max \left\{ \frac{1}{\left<c,v_{i}\right>^2} \right\} = \theta(G)
+                  \end{equation}
+
+                  Thus, $\{v_{1},v_{2},\hdots,v_{k}\}$ should be mutually orthogonal.
+
+                  Also,
+                  \begin{eqnarray}
+                        \theta(G) &\ge& \frac{1}{\left<c,v_{i}\right>^2} \\
+                        \left<c,v_{i}\right>^2 &\le& \frac{1}{\theta(G)}
+                  \end{eqnarray}
+            \end{proof}
+      \end{frame}
+
+      \begin{frame}
+            \begin{proof}
+                  Then
+                  \begin{eqnarray}
+                        1 &=& c^{2}
+                        \geq \sum_{i=1}^{k} \left<c,v_{i}\right>^{2}
+                        \geq \frac{k}{\theta(G)}
+                  \end{eqnarray}
+            \end{proof}
+      \end{frame}
+
 \subsection{Theta Function of Product Graph}
 
       \begin{frame}
@@ -54,36 +103,6 @@
                         &=& \max \left\{ \frac{1}{\left<c_{v},v_{i}\right>^2 \left<c_{w},w_{j}\right>^2} \right\} \\
                         &=& \max \left\{ \frac{1}{\left<c_{v},v_{i}\right>^2} \right\} \max \left\{ \frac{1}{\left<c_{w},w_{j}\right>^2} \right\} \\
                         &=& \theta(G) \theta(H) \\
-                  \end{eqnarray}
-            \end{proof}
-      \end{frame}
-
-\subsection*{Relation of Theta Function and Alpha Function}
-
-      \begin{frame}
-            \frametitle{Relation of Theta Function and Alpha Function}
-
-            \begin{lemma}
-                  \begin{equation}
-                        \theta(G) \geq \alpha(G)
-                  \end{equation}
-            \end{lemma}
-
-            \pause
-
-            \begin{proof}
-                  Let $ \{1,2,\dots,k\} $ be the set of vertices of $ G $ such that every point is not adjacency in $ G $. And $ k = \alpha(G) $
-      
-                  Let $ \{v_1, v_2, \dots, v_n\} $ be an orthonormal representation of $ G $ and $ c $ such that
-                  \begin{equation}
-                        \max \left\{ \frac{1}{\left<c,v_{i}\right>^2} \right\} = \theta(G)
-                  \end{equation}
-                        
-                  Then
-                  \begin{eqnarray}
-                        1 &=& c^{2}
-                        \geq \sum_{i=1}^{k} \left<c,v_{i}\right>^{2}
-                        \geq \frac{k}{\theta(G)}
                   \end{eqnarray}
             \end{proof}
       \end{frame}

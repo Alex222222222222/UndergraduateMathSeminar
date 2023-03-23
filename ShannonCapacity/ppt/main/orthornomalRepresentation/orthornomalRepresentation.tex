@@ -6,7 +6,7 @@
             Here we have the third way to defined a set of characters.
 
             \begin{definition}[Orthonormal Representation]\label{def:orthonormalRepresentation}
-                  Given a graph $ G $ with vertices $ 1,2,\dots,n $, the orthonormal representation of $ G $ is a set of unit vectors $ \{v_1, v_2, \dots, v_n\} $ such that $ v_i $ and $ v_j $ are orthogonal if $ i $ and $ j $ are not adjacent in $ G $.
+                  Given a graph $ G $ with vertices $ 1,2,\dots,n $, the orthonormal representation of $ G $ is a set of \textbf{unit vectors} $ \{v_1, v_2, \dots, v_n\} $ such that if $ i $ and $ j $ are \textbf{not adjacent} in $ G $ then $ v_i $ and $ v_j $ are \textbf{orthogonal}.
             \end{definition}
 
             \pause
@@ -45,10 +45,23 @@
       \end{frame}
 
       \begin{frame}
-            This is the product of graph in the sense of orthonormal representation.
-
             \frametitle{Product of Orthonormal Representation}
+
             \begin{lemma}
-                  Given a graph $ G $ with vertices $ 1,2,\dots,n $, and a graph $ H $ with vertices $ 1,2,\dots,m $. Then vectors $\{ v_{i}\circ w_{j} \}$ is an orthonormal representation of $ G \times H $.
+                  Given a graph $ G $ with vertices $ 1,2,\dots,n $, and a graph $ H $ with vertices $ 1,2,\dots,m $.
+                  Let $ \{v_1, v_2, \dots, v_n\} $ and $ \{w_1, w_2, \dots, w_m\} $ be orthonormal representations of $ G $ and $ H $ respectively.
+                  Then vectors $\{ v_{i}\circ w_{j} \}$ is an orthonormal representation of $ G \times H $.
             \end{lemma}
+
+            \pause
+
+            \begin{proof}
+                  Let $(i,j)$ and $(i',j')$ be two vertices in $ G \times H $.
+
+                  If $ (i,j) $ and $ (i',j') $ not adjacent, then at least one of $ i $ and $ i' $ is not adjacent to $ j $ and $ j' $ respectively, which means at least one of $ v_i $ and $ v_{i'} $ is orthogonal to $ w_j $ and $ w_{j'} $ respectively.
+                  \begin{align}
+                        \langle v_i \circ w_j, v_{i'} \circ w_{j'} \rangle &= \langle v_i, v_{i'} \rangle \langle w_j, w_{j'} \rangle \\
+                        &= 0
+                  \end{align}
+            \end{proof}
       \end{frame}
