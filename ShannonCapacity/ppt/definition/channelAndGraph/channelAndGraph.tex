@@ -21,7 +21,7 @@
                               % First we draw the vertices
                               \foreach \pos/\name in {{(0,0)/sender}, {(3,0)/receiver}}
                                     \node[vertex] (\name) at \pos {$\name$};
-                              \foreach \pos/\name/\la in {{(0,1)/abcde/a\textbf{\textit{bc}}de}, {(3,1)/acbde/a\textbf{\textit{cb}}de}}
+                              \foreach \pos/\name/\la in {{(0,0.7)/abcde/a\textbf{\textit{bc}}de}, {(3,0.7)/acbde/a\textbf{\textit{cb}}de}}
                                     \node[message] (\name) at \pos {\la};
                               % Connect vertices with edges and draw weights
                               \foreach \source/ \dest in {sender/receiver}
@@ -42,7 +42,7 @@
       \begin{frame}
             \frametitle{Confusable}
             \begin{definition}[confusable]
-                  Given two distinct characters $a$, $b$. If $a$ and $b$ have chance to be decoded into a same character say $c$, we say $a$ and $b$ are confusable.
+                  Given two distinct characters $a$, $b$. If $a$ and $b$ have chance to be \textbf{decoded into a same character} say $c$, we say $a$ and $b$ are \textbf{confusable}.
 
                   For a two distinct messages of length $n$, say $a_{1}a_{2}\dots a_{n}$, $b_{1}b_{2}\dots b_{n}$ is confusable if and only if $a_{i}$ and $b_{i}$ are \textbf{confusable} or \textbf{same} for every $i$.
             \end{definition}
@@ -54,14 +54,14 @@
             \frametitle{Rate of Channel}
 
             \begin{definition}[rate of channel]
-                  The rate of channel actually represent how many distinct character can be send per unit time.
+                  The rate of channel actually represent how many \textbf{distinct character} can be send \textbf{per unit time}.
 
                   Given a channel that could send $r$ distinct characters per unit time. And send message for $n$ unit time, so the number of distinct messages the channel can send is $r^{n}$.
 
                   \pause
 
-                  Conversely, given a channel that could send $m$ distinct messages in $n$ unit time.
-                  The rate of channel is $\sqrt[n]{m}$.
+                  Conversely, given a channel that could send $m$ \textbf{distinct messages} in $n$ \textbf{unit time}.
+                  Then the rate of channel is $\sqrt[n]{m}$.
                   
             \end{definition}
       \end{frame}
@@ -73,7 +73,7 @@
             \begin{definition}[zero error rate]
                   Given a channel that could send messages in $n$ unit time.
 
-                  We want to find the maximum set of messages $M$ that no two of them is confusable.
+                  We want to find the maximum set of messages $M$ that \textbf{no two of them is confusable}.
 
                   \begin{equation}
                         \text{zero error rate} = \max_{M} \sqrt[n]{|M|}
@@ -137,7 +137,7 @@
 
             \smallskip
 
-            Then the graph representation of the characters is the graph with vertices $\{1,2,\dots,n\}$ and edges $(i,j)$ if and only if $i$ and $j$ is distinct and could be confused with each other.
+            Then the graph representation of the characters is the graph with vertices $\{1,2,\dots,n\}$ and edges $(i,j)$ if and only if $i$ and $j$ is \textbf{distinct} and could be \textbf{confused with each other}.
       \end{definition}
 
       Accordingly, there is the corresponding way that using graphs to represent a message and Shannon Capacity.
