@@ -20,6 +20,16 @@
             This could be proved by proving the set of all possible cases of $ \{v_1, v_2, \dots, v_n,c \} $ is compact. And the function $ \max \frac{1}{\left<c,v_{i}\right>^2} $ is continuous.
       \end{frame}
 
+      \begin{frame}
+            \begin{lemma}
+                  Given a set of real finite dimensional unit vectors $\{v_{1},v_{2},\hdots,v_{n}\}$, that is mutually orthogonal.
+                  And given an unit vector $c$, then
+                  \begin{equation}
+                        \sum_{i=1}^{n} \langle c, v_{i} \rangle \le 1
+                  \end{equation}
+            \end{lemma}
+      \end{frame}
+
 \subsection*{Relation of Theta Function and Alpha Function}
 
       \begin{frame}
@@ -30,41 +40,35 @@
                         \theta(G) \geq \alpha(G)
                   \end{equation}
             \end{lemma}
-
-            \begin{lemma}
-                  Given a set of real finite dimensional unit vectors $ \{v_1, v_2, \dots, v_n\} $ which are mutually orthogonal, and a arbitrary unit vector $c$ then
-                  \begin{equation}
-                        \sum_{i=1}^{n}\left<c,v_{i}\right>^2 \le 1
-                  \end{equation}
-            \end{lemma}
       \end{frame}
 
       \begin{frame}
             \begin{proof}
-                  Let $ \{1,2,\dots,k\} $ be the maximum set of vertices of $ G $ such that every point is not adjacency in $ G $. Thus $ k = \alpha(G) $
-      
-                  Let $ \{v_1, v_2, \dots, v_n\} $ be an orthonormal representation of $ G $ and $ c $ such that
+                  Let $ \{1,2,\dots,k\} $ be the maximum set of vertices of $ G $ such that every point is not adjacency in $ G $. Thus $ k = \alpha(G) $.
+
+                  Let $ \{v_1, v_2, \dots, v_n\} $ be an orthonormal representation of $ G $.
+
+                  Then, $\{v_{1},v_{2},\hdots,v_{k}\}$ should be mutually orthogonal. And, for any unit vector $c$,
                   \begin{equation}
-                        \max \left\{ \frac{1}{\left<c,v_{i}\right>^2} \right\} = \theta(G)
+                        \sum_{i=1}^{k} \langle c, v_{i} \rangle \le 1
                   \end{equation}
 
-                  Thus, $\{v_{1},v_{2},\hdots,v_{k}\}$ should be mutually orthogonal.
-
-                  Also,
+                  $\exists j$ such that
                   \begin{eqnarray}
-                        \theta(G) &\ge& \frac{1}{\left<c,v_{i}\right>^2} \\
-                        \left<c,v_{i}\right>^2 &\le& \frac{1}{\theta(G)}
+                        \langle c, v_{j} \rangle &\le& \frac{1}{k} \\
+                        \frac{1}{\langle c, v_{j} \rangle} &\ge& k
                   \end{eqnarray}
+                  
             \end{proof}
       \end{frame}
 
       \begin{frame}
             \begin{proof}
-                  Then
                   \begin{eqnarray}
-                        1 &=& c^{2}
-                        \geq \sum_{i=1}^{k} \left<c,v_{i}\right>^{2}
-                        \geq \frac{k}{\theta(G)}
+                        \theta(G) &=& \inf_{\{v_1, v_2, \dots, v_n\},c} \max_{i} \frac{1}{\left<c,v_{i}\right>^2} \\
+                              &\ge& \inf_{\{v_1, v_2, \dots, v_n\},c} \frac{1}{\left<c,v_{j}\right>^2} \\
+                              &\ge& k \\
+                              &=& \alpha(G)
                   \end{eqnarray}
             \end{proof}
       \end{frame}
@@ -101,7 +105,7 @@
                         \theta(G \times H) &\leq& 
                         \max \left\{ \frac{1}{\left<c_{v} \circ c_{w},v_{i} \circ w_{j}\right>^2} \right\} \\
                         &=& \max \left\{ \frac{1}{\left<c_{v},v_{i}\right>^2 \left<c_{w},w_{j}\right>^2} \right\} \\
-                        &=& \max \left\{ \frac{1}{\left<c_{v},v_{i}\right>^2} \right\} \max \left\{ \frac{1}{\left<c_{w},w_{j}\right>^2} \right\} \\
+                        &\leq& \max \left\{ \frac{1}{\left<c_{v},v_{i}\right>^2} \right\} \max \left\{ \frac{1}{\left<c_{w},w_{j}\right>^2} \right\} \\
                         &=& \theta(G) \theta(H) \\
                   \end{eqnarray}
             \end{proof}

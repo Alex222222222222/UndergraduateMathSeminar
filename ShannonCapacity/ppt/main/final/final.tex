@@ -3,14 +3,14 @@
 \begin{frame}
       \begin{theorem}
             \begin{equation}
-                  \theta(C_{n}) \leq \sqrt{5}
+                  \theta(C_{5}) \leq \sqrt{5}
             \end{equation}
       \end{theorem}
 \end{frame}
 
 \begin{frame}
       \begin{proof}
-            Consider an umbrella that has a handle and $5$ ribs that all have unit length. And also its handle is a unit vector.
+            Consider an umbrella that has a handle and $5$ ribs that all have unit length. And also its handle is a unit vector.  Also, angles between two consecutive ribs are same. 
 
             \begin{tikzpicture}
                   \begin{axis}[view = {50}{40}]
@@ -72,8 +72,6 @@
 
 \begin{frame}
       \begin{proof}
-            Here, angles between two consecutive ribs are same. 
-            
             Let angle between $v_{1}$ and $v_{3}$, $v_{2}$ and $v_{4}$, $v_{3}$ and $v_{5}$, $v_{4}$ and $v_{1}$, $v_{5}$ and $v_{2}$ be $\frac{\pi}{2}$.
 
             Then, the $5$ ribs of such an umbrella form an orthonormal representation of $C_{5}$.
@@ -82,7 +80,8 @@
 
             So, by some calculation, we get
             \begin{eqnarray}
-                  \theta(C_{5}) &\le& \max \frac{1}{<d,v_{i}>^{2}} \\
+                  \theta(C_{5}) &=& \inf_{\{v_{1},v_{2} \hdots v_{5}\},c} \max_{i} \frac{1}{\langle c, v_{i} \rangle} \\
+                  &\le& \max \frac{1}{<d,v_{i}>^{2}} \\
                   &=& \left(
                         \frac{1}{\cos(\gamma)}
                   \right)^{2} \\

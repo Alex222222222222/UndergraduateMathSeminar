@@ -11,7 +11,7 @@
 
             \pause
 
-            This existence of the orthonormal representation can be proved by induction.
+            % This existence of the orthonormal representation can be proved by induction.
 
       \end{frame}
 
@@ -23,7 +23,7 @@
                   Given two vectors $ v = \left(v_{1},\dots,v_{n}\right)^{T} $ and $ w = \left(w_{1},\dots,w_{n}\right)^{T} $, the tensor product $ v \circ w $ is defined by
                   \begin{equation}
                         v \circ w = \left(
-                              v_{1}w_{1},\dots,v_{1}w_{n},
+                              v_{1}w_{1}, v_{1}w_{2},\dots,v_{1}w_{n},
                               v_{2}w_{1},\dots,v_{2}w_{n},
                               \dots,
                               v_{n}w_{1},\dots,v_{n}w_{n}
@@ -51,6 +51,7 @@
                   Given a graph $ G $ with vertices $ 1,2,\dots,n $, and a graph $ H $ with vertices $ 1,2,\dots,m $.
                   Let $ \{v_1, v_2, \dots, v_n\} $ and $ \{w_1, w_2, \dots, w_m\} $ be orthonormal representations of $ G $ and $ H $ respectively.
                   Then vectors $\{ v_{i}\circ w_{j} \}$ is an orthonormal representation of $ G \times H $.
+                  If the vector $v_{i}w_{j}$ correspond to the vertex $(i,j)$ in $G \times H$
             \end{lemma}
 
             \pause
@@ -58,10 +59,9 @@
             \begin{proof}
                   Let $(i,j)$ and $(i',j')$ be two vertices in $ G \times H $.
 
-                  If $ (i,j) $ and $ (i',j') $ not adjacent, then at least one of $ i $ and $ i' $ is not adjacent to $ j $ and $ j' $ respectively, which means at least one of $ v_i $ and $ v_{i'} $ is orthogonal to $ w_j $ and $ w_{j'} $ respectively.
+                  If $ (i,j) $ and $ (i',j') $ not adjacent, then at least one of $ i $ and $ i' $ is not adjacent to $ j $ and $ j' $ respectively, which means at least one of $ v_i , v_{i'} $ and $ w_j , w_{j'} $ is orthogonal.
                   \begin{align}
-                        \langle v_i \circ w_j, v_{i'} \circ w_{j'} \rangle &= \langle v_i, v_{i'} \rangle \langle w_j, w_{j'} \rangle \\
-                        &= 0
+                        \langle v_i \circ w_j, v_{i'} \circ w_{j'} \rangle &= \langle v_i, v_{i'} \rangle \langle w_j, w_{j'} \rangle = 0 
                   \end{align}
             \end{proof}
       \end{frame}
