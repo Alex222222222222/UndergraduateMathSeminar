@@ -5,11 +5,11 @@
       \begin{frame}
             \frametitle{Channel}
             \begin{definition}[channel]
-                  A channel has a sender and a receiver.
-                  \pause
-
+                  Characters is a finite set.
 
                   A message is a finite sequence of characters.
+
+                  A channel has a sender and a receiver.
                   The sender sends a message to the receiver.
                   \begin{figure}[h!]
                         \tikzstyle{vertex}=[fill=black!25,minimum size=20pt,inner sep=0pt]
@@ -60,6 +60,8 @@
 
                   \pause
 
+                  \vspace{0.5em}
+
                   Conversely, given a channel that could send $m$ \textbf{distinct messages} in $n$ \textbf{unit time}.
                   Then the rate of channel is $\sqrt[n]{m}$.
                   
@@ -74,6 +76,7 @@
                   Given a channel that could send messages in $n$ unit time.
 
                   We want to find the maximum set of messages $M$ that \textbf{no two of them is confusable}.
+                  Which means if we send these messages then, there is no chance of get an error.
 
                   \begin{equation}
                         \text{zero error rate} = \max_{M} \sqrt[n]{|M|}
@@ -87,7 +90,8 @@
             \begin{definition}
                   If given a set of characters $S$, and some of the characters could be confusable.
 
-                  We want to find
+                  In the reality, we usually do not fix $n$, so the thing we really want to find is
+                  
                   \begin{equation}
                         \sup_{n} \left\{
                               \text{zero error rate of channel send messages for $n$ unit time}
@@ -167,9 +171,9 @@
 \begin{frame}
       \frametitle{$\alpha(G)$}
       \begin{definition}[$\alpha(G)$]\label{def:alpha}
-            Given a finite graph $G$. $\alpha(G)$ is the \textbf{maximum} number of vertices of the subgraph of $G$ such that every vertex of the subgraph is not adjacent in $G$.
+            Given a finite graph $G$. $\alpha(G)$ is the \textbf{maximum} number of vertices such that every two of them is not adjacent in $G$.
 
-            If $G$ represent a set of characters, $\alpha(G^{n})$ is just the zero error rate we have defined before.
+            If $G$ represent a set of characters, $\sqrt[n]{\alpha(G^{n})}$ is just the zero error rate we have defined before.
 
             \pause
 
