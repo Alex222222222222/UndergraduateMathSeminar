@@ -6,8 +6,10 @@
             \frametitle{Channel}
             \begin{definition}[channel]
                   Characters is a finite set.
+                  Could be represent by $S$.
 
                   A message is a finite sequence of characters.
+                  A message is then an element of $S^{n}$.
 
                   A channel has a sender and a receiver.
                   The sender sends a message to the receiver.
@@ -42,9 +44,9 @@
       \begin{frame}
             \frametitle{Confusable}
             \begin{definition}[confusable]
-                  Given two distinct characters $a$, $b$. If $a$ and $b$ have chance to be \textbf{decoded into a same character} say $c$, we say $a$ and $b$ are \textbf{confusable}.
+                  Given two distinct characters $a, b \in S$. If $a$ and $b$ have chance to be \textbf{decoded into a same character} say $c$, we say $a$ and $b$ are \textbf{confusable}.
 
-                  For a two distinct messages of length $n$, say $a_{1}a_{2}\dots a_{n}$, $b_{1}b_{2}\dots b_{n}$ is confusable if and only if $a_{i}$ and $b_{i}$ are \textbf{confusable} or \textbf{same} for every $i$.
+                  For a two distinct messages of length $n$, say $a_{1}a_{2}\dots a_{n}, b_{1}b_{2}\dots b_{n} \in S^{n}$ is confusable if and only if $a_{i}$ and $b_{i}$ are \textbf{confusable} or \textbf{same} for every $i$.
             \end{definition}
       \end{frame}
 
@@ -56,16 +58,16 @@
             \begin{definition}[rate of channel]
                   The rate of channel actually represent how many \textbf{distinct character} can be send \textbf{per unit time}.
 
-                  Given a channel that could send $r$ distinct characters per unit time. And send message for $n$ unit time, so the number of distinct messages the channel can send is $r^{n}$.
-
                   \pause
 
                   \vspace{0.5em}
 
-                  Conversely, given a channel that could send $m$ \textbf{distinct messages} in $n$ \textbf{unit time}.
-                  Then the rate of channel is $\sqrt[n]{m}$.
+                  Consider a channel that only send a subset $ M \subseteq S^{n} $.
+                  Then the rate of the channel could be defined as $ \sqrt[n]{|M|} $
                   
             \end{definition}
+
+            Given a channel with rate $r$, and could send messages in $n$ unit time. Then the channel could send $r^{n}$ distinct messages in $n$ unit time.
       \end{frame}
 
 \subsubsection*{Zero Error Rate of Channel}
@@ -100,8 +102,6 @@
 
                   And we call this the shannon Capacity and denoted by $\Theta(S)$.
             \end{definition}
-
-            Clearly, shannon Capacity is actually a function of the set of characters. So, we want a more abstract way to represent the characters.
       \end{frame}
 
 \subsubsection*{Graph}
@@ -155,7 +155,7 @@
       \pause
       \smallskip
 
-      Recall that before, $2$ distinct messages is confusable means that they can be decoded into the same message, which means every characters the two channel use need to be confusable or the same.
+      Recall that before, $2$ distinct messages is confusable means that they can be decoded into the same message, which means every characters the two channel use need to be \textbf{confusable} or the \textbf{same}.
 
       \begin{definition}[graph product]\label{def:graphProduct}
             Given two graph $ G $ and $ H $. The graph product $ G \times H $ is the graph with vertices $ V(G \times H) = V(G) \times V(H) $ in which $ (x,y) $ is adjacent to $ (x',y') $ in $ G \times H $ if and only if $ x $ is \textbf{adjacent} to $ x' $ or the \textbf{same} in $ G $ and $ y $ is \textbf{adjacent} to $ y' $ or the \textbf{same} in $ H $.
