@@ -25,7 +25,7 @@
                   Given a set of real finite dimensional unit vectors $\{v_{1},v_{2},\hdots,v_{n}\}$, that is mutually orthogonal.
                   And given an unit vector $c$, then
                   \begin{equation}
-                        \sum_{i=1}^{n} \langle c, v_{i} \rangle \le 1
+                        \sum_{i=1}^{n} \langle c, v_{i} \rangle ^ {2} \le 1
                   \end{equation}
             \end{lemma}
       \end{frame}
@@ -50,13 +50,13 @@
 
                   Then, $\{v_{1},v_{2},\hdots,v_{k}\}$ should be mutually orthogonal. And, for any unit vector $c$,
                   \begin{equation}
-                        \sum_{i=1}^{k} \langle c, v_{i} \rangle \le 1
+                        \sum_{i=1}^{k} \langle c, v_{i} \rangle^{2} \le 1
                   \end{equation}
 
                   $\exists j$ such that
                   \begin{eqnarray}
-                        \langle c, v_{j} \rangle &\le& \frac{1}{k} \\
-                        \frac{1}{\langle c, v_{j} \rangle} &\ge& k
+                        \langle c, v_{j} \rangle^{2} &\le& \frac{1}{k} \\
+                        \frac{1}{\langle c, v_{j} \rangle^{2}} &\ge& k
                   \end{eqnarray}
                   
             \end{proof}
